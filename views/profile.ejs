@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+
+    <head>
+            <style>
+
+                body {
+                    position: relative; 
+                }
+
+                h1{
+                text-align:center;
+                
+                }
+
+                h2{
+                text-align:center;
+                }
+
+                .button{
+                margin-right:50px;
+                }
+                li a:hover{
+
+                background-color:purple;
+                }
+
+                li{
+                font-family: "Times New Roman", Georgia, serif;
+                    font-size:18px;
+
+                }
+                #About {
+                padding-top:30px;
+                    color: #fff;
+                    background-color:#BA9467;
+                    font-family: "Times New Roman", Georgia, serif;
+                font-size:20px;
+                    margin-bottom:20px;
+                    color:black;
+                    text-align:center;
+                }
+               
+
+                #Portfolio {
+                padding-top:10px;
+                color: #fff;
+                background-color:#9B9B9B;
+                    margin-bottom:20px;
+                    color:black;
+                    padding-left:0px;
+                    font-family: "Times New Roman", Georgia, serif;
+                }
+                
+                #Contact{
+                padding-top:10px;
+                color: #fff; 
+                background-color:#93714E;
+                color:black;
+                font-family: "Times New Roman", Georgia, serif;
+                }
+                
+            
+            </style>
+
+
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        </head>
+        <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand" href="#"><%= user.username %></a>
+            </div>
+            <div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+
+                <ul class="nav navbar-nav navbar-right">
+                        
+                        <% if(user) {%>
+                            <li><a href="/auth/logout">Logout</a></li>
+                            <li class = "homepage"><a href="/">HomePage</a></li>
+                        <%} else {%>
+                            <li id ="login"><a href="/auth/login">Login</a></li>
+                            <li><a href="/">Home</a></li>
+        
+                        <%}%>
+                  <li><a href="#About">About</a></li>
+                  <li><a href="#Portfolio">Portfolio</a></li>
+                  <li><a href="#Contact">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>    
+        
+        <div id="About" class="container">
+          <div class="row" id="Ab">
+             <div class="col-md-12">
+             <h1>About</h1>
+        <p>My name is Yong, I am a junior web developer.  
+           I have an experience on javascript/css3/html, node.js, database, because this is the building blocks or roads to dig out my other languages those learn in campus.
+          I also consider myself as an intermidaite developer as well because beyond this three languages, I learn one wordpress and more I have a little expericene with one back-end language which is PHP/SQL.  I am willing to learn and  still growing to become the best I can be as a web developer.<br/></br>
+         
+         <button class="button"><a href="https://www.linkedin.com/in/yong-zhou-03149b106/" target="_blank" >Linkedin</a></button>
+        
+            <button class="button"><a href="https://github.com/YongLAGCC" target="_blank" >GitHub</a></button>
+         
+            <button class="button"><a href="http://www.bu.edu/" taget="_blank">School</a></button>
+          
+          
+         </P></div>
+            </div>
+        </div>
+          <!----------------------------------->
+        <div id="Portfolio" class="container">
+          <h1>Portfolio</h1>
+          <!------------------PORTFOLIO------------>    
+                
+                <div class="row port">
+                  <div class="col-xs-4">
+                  <a href="http://176.32.230.45/dapzzyweb.com/Mystwo/" target="_blank"><img src="http://dapzzy.com/dapzzyweb/diary.jpg" alt="child care" width="380px;" height="320px;"></img></a>
+                  </div>
+                
+                  
+           <!---------------------------->
+                  
+                  <div class="col-xs-4">
+                  <a href="http://dapzzy.com/dapzzyweb/comingsoon.html" target="_blank" ><img src="http://dapzzy.com/dapzzyweb/school.jpg" alt="child care" width="380px;" height="320px;"></img</a>
+                </div>
+                 
+                
+                  
+               <!---------------------------->
+               
+                  <div class="col-xs-4">
+                    <a href="http://dapzzy.com/Childhood-parenting/welcome/" target="_blank"><img src="http://dapzzy.com/dapzzyweb/kidz.jpg" alt="child care" width="380;" height="320px;"></img></a> 
+                    </div>
+                
+              <!-------------->
+                 
+            </div>
+          </div>
+          <!----------------------------->
+        <div id="Contact" class="container">
+          <h1>Contact</h1>
+          <!------------CONTACT---------------------->         
+           
+            <div class="container">
+                <div class="row" id="conc">
+                  <div class="col-md-12">
+                    <h2 id="h2">Get In Touch With Me</h2>
+                   <form-group>
+                <div class="form-group">
+                     <label for="Firstname">Firstname</label>
+            <input type="text" class="form-control"firstname" placeholder="Firstname" style="width:800px;">
+                     </div>
+                     
+                     <div class="form-group">
+                     <label for="Firstname">Lastname</label>
+            <input type="text" class="form-control" id="lastname" placeholder="lastname" style="width:800px;">
+                     </div>
+                     
+                     <div class="form-group">
+                     <label for="Email">Email</label>
+            <input type="text" class="form-control" id="email" placeholder="your email here" style="width:800px;">
+                                                                                            </div>
+                                                                                   <div>    
+          <textarea type="text" id="textarea" placeholder="your message here" style="width:800px;height:100px;"></textarea>
+                                             </div>
+                                             
+             <button type="submit">Submit</button>
+                          
+        
+            </form>
+        </div>
+        </body>
+        
+        
+</html>
