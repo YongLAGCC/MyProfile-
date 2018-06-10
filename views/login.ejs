@@ -1,63 +1,205 @@
 <!DOCTYPE html>
+
 <html>
     <head>
-        <meta charset="utf-8">
-        <title>Login</title>
         <style>
             body{
-                font-family: arial;
-                margin: 0;
+            font-family: Arial, Helvetica,sans-serif;
+            font-size:15px;
+            line-height: 1.5; 
+            padding:0;
+            margin:0;
+            background-color:#0B0719;
             }
-            nav{
-                background: skyblue;
-                padding: 20px 10px;
+
+
+            .container{
+            width:80%;
+            margin:auto;
+            overflow:hidden;
             }
-            nav ul{
-                max-width: 960px;
-                margin: 0 auto;
-                padding: 0;
+
+            ul{
+            margin:0;
+            padding:0;
             }
-            nav li{
-                list-style-type: none;
-                display: inline-block;
-                margin: 0 10px 0 0;
+
+            header{
+            background:	#000000;
+            color:#8258FA;
+            padding-top:10px;
+            min-height:80px;
+            border-bottom:#8A0886 3px solid;
             }
-            nav a{
-                color: #fff;
-                font-size: 18px;
-                background: rgba(255,255,255,0.2);
-                text-decoration: none;
-                padding: 10px;
-                display: block;
+
+            header a{
+            color:#8258FA;
+            text-decoration:none;
+            text-transform: uppercase;
+            font-size:25px;
             }
-            main, header{
-                max-width: 960px;
-                margin: 30px auto;
-                padding: 0 10px;
-                color: #333;
+
+            header li {
+            float: left;
+            display:inline;
+            padding: 0 20px 0 20px;
             }
-            .google-btn{
-                color: #fff;
-                text-decoration: none;
-                font-size: 18px;
-                padding: 10px;
-                background: rgb(69, 69, 230);
+
+            header #project{
+            float:left;
             }
+
+            header #project h1{
+            margin:0;
+            }
+
+            header nav{
+            float:right;
+            margin-top:10px;
+            }
+
+
+
+
+            header a:hover{
+            color:#cccccc;
+            font-weight:bold;
+            }
+
+
+            #case{
+            font-size:20px;
+            background:url(https://cdn.tutsplus.com/gamedev/uploads/2013/12/header.jpg)no-repeat center;
+            text-align:center;
+            background-color: #0B0719;
+            background-size: cover;
+            
+            margin: 2rem 0 2rem 0;
+            
+            }
+
+            #case h1{
+            margin-top:1000px;
+            font-size:100px;
+            color:#000000;
+            margin-bottom:15px;
+            }
+
+
+
+
+            #divder{
+            padding:10px;
+            color:#ffffff;
+            background:#380B61
+            }
+
+            #boxes{
+            margin-top:20px;
+            }
+
+            #boxes .box{
+            float:center;
+            text-align: center;
+            width:100%;
+            padding:10px;
+            color: #ffffff;
+            font-size:25px;
+            }
+
+            #boxes .box img{
+            width:600px;
+            
+            }
+
+            footer{
+            padding:20px;
+            margin-top:20px;
+            color:#ffffff;
+            background-color:#5F04B4;
+            text-align: center;
+            }
+
+
+            @media(max-width: 768px){
+            header #project,
+            header nav,
+            header nav li,
+            #divder h1,
+            #divder form,
+            #boxes .box,
+        
+            header{
+                padding-bottom:20px;
+            }
+
+            #case h1{
+                margin-top:40px;
+            }
+
+
         </style>
-    </head>
-    <body>
-        <nav>
-            <ul>
+     </head>
+<body>
+     <header>
+        <div class="container">
+          <div id="project">
+            <h1><a class="google-btn" href="/auth/google">Login with Google+</a><h1/>
+          </div>
+          <nav>
+                <ul>
                 <li><a href="/auth/logout">Logout</a></li>
                 <li><a href="/profile">Profile</a></li>
                 <li><a href="/">Homepage</a></li>
             </ul>
-        </nav>
-        <header>
-            <h1>To verify my friend, login using...</h1>
-        </header>
-        <main>
-            <a class="google-btn" href="/auth/google">Google+</a>
-        </main>
-    </body>
+          </nav>
+        </div>
+      </header>
+       
+      <section id="case">
+        
+        <div class="container">
+          <h1>________</h1>
+
+        </div>
+      </section>
+      <section id="divder">
+        <div class="container">
+          <h1>Go Down For Fun!!!</h1>
+        </div>
+      </section>
+      <section id="boxes">
+        <div class="container">
+          <div class="box">
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlSRtnlYfspWm62ipNnvNdJfi3tvuj2Tt6ut39ChjeRQzgxFch5Q" alt="space">         
+            <h3>Create 2-D Video Games</h3>
+            <p>Phaser is a free software 2D game framework for making HTML5 games for desktop and mobile. It was developed by Photon Storm. Phaser uses both a Canvas and WebGL renderer internally and can automatically swap between them based on browser support. This allows for fast rendering across desktop and mobile. It uses the Pixi.js library for rendering.</p>
+          </div>
+        <div class="container">
+          <div class="box">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-U5YSB3dgaQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <h3>Mario Bros,</h3>
+            <p>In this video a Youtuber Geovanny Beltran demonstrates how he recreated Mario Brothers using Phaser. According to Geovanny it him about 6 hours to completed recreate the Game.</p>
+          </div>
+        <div class="container">
+          <div class="box">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8pzf_ZOXnQqjBfPjPObd1JCKSvEfsJo0SYME3gXENICXKkQrPRQ" alt="space">
+            <h3>Space invader<a target="_blank" href="https://phaser.io/examples/v2/games/invaders">click to play game</a></h3>
+            <p>Here is an example of Space Invaders created with Phaser.</p>
+          </div>
+        <div class="container">
+          <div class="box">
+            <img src="https://camo.githubusercontent.com/3288e5f546f7f5a1b99d4c00c170e300dfb29461/68747470733a2f2f7068617365722e696f2f696d616765732f6769746875622f3330302f73616d706c65312e706e67" alt="space">
+            <h3>Phaser</h3>
+            <p>Phaser World is Phaser's weekly newsletter, published every Friday. There you can find the newest updates and happenings of Phaser. Including game releases, tutorials, videos and our Development Logs. 
+            </p>
+          </div>
+        </div>
+      </section>
+  
+<footer>
+  <h3>&copy; 2018 by Yong @ Boston University</h3>
+</footer>
+
+  </body>
 </html>
